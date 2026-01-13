@@ -1,0 +1,127 @@
+html {
+	background-color: rgb(50, 50, 50);
+}
+header {
+	padding: 1.5em 0 2em 0;
+	border-bottom: 3px solid #931420;
+	background-image: -moz-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -webkit-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -o-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+    width: 1000px;
+    height: 700px;
+    margin: 0 auto;
+  }
+header h1 {
+  font-size: 75%;
+  margin-left: 40px;
+}
+header h2 {
+	font-size: 175%;
+	color: #800000;
+}
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+}
+header h4 {
+  font-size: 75%;
+}
+
+
+.float-container {
+    padding: 20px;
+}
+.float-left {
+    width: 30%;
+    float: left;
+    padding: 20px;
+    border: 2px solid red;
+    height: 500px;
+} 
+.float-right {
+    width: 70%;
+    float: right;
+    padding: 20px;
+    border: 2px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: 500px;
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--block-space);
+    justify-content: center;
+    align-items: stretch;
+}
+
+:root {
+  --inline-space: 0.5rem;
+  --block-space: 1rem;
+  color-scheme: light dark;
+}
+  
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI';
+}
+
+/* p {
+  max-width: 70ch;
+  line-height: 1.5;
+} */
+
+
+
+
+.card-container {
+  width: 122px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: row;
+  flex-direction: column;
+  padding: var(--inline-space);
+  background: var(--rarity-background);
+
+}
+
+.common {
+  --rarity-background: #f5f5dc;
+}
+
+.uncommon {
+  --rarity-background: #959a9d;
+}
+
+.rare {
+  --rarity-background: #ea9c45;
+}
+
+.super-rare {
+  --rarity-background: #885cd5;
+}
+
+.legendary {
+  --rarity-background: linear-gradient(to bottom right, #a158dc, #f462f4, #f3ea94, #c5f882, #5ba3f0);
+}
+
+.event {
+  --rarity-background: #e66d59;
+}
+
+.token {
+  --rarity-background: var(--p-surface-800)
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Leap Machine</title>
+	<!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+	<link rel="stylesheet" href="main.css">
+
+    <!--<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+    integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2 align="center">Leap Machine for PvZ Heroes</h2>
+        
+        <div class="float-container">
+            <div class="float-left">
+                <input type="radio" name="team" id="teamPlants" value="teamPlants" > Leap Plants
+                <input type="radio" name="team" id="teamZombies" value="teamZombies" > Leap Zombies
+                
+                <p></p>
+
+                <div>
+                    <input type="radio" name="percentQuery" id="qCost" value="0">
+                    <label for="costCheck">Cost:</label>
+                    <input type="number" id="costCheck" name="eqCost" min="0" max="15">
+                </div>
+                <div>
+                    <input type="radio" name="percentQuery" id="qStr" value="1">
+                    <label for="strCheck">Minimum Strength:</label>
+                    <input type="number" id="strCheck" name="MinStrength" min="0" max="15">
+                    <h1>
+                        <input type="checkbox" id="useEfStr" name="useEfStr">
+                        <label for="useEfStr">*Search Effective Strength</label>
+                    </h1>
+                </div>
+                <div>
+                    <input type="radio" name="percentQuery" id="qCon" value="2">
+                    <label for="conCheck">Minimum Health:</label>
+                    <input type="number" id="conCheck" name="MinHealth" min="0" max="10">
+                    <h1>
+                        <input type="checkbox" id="useEfCon" name="useEfCon">
+                        <label for="useEfStr">*Search Effective Health</label>
+                    </h1>
+                </div>
+
+                <input type="button" id="qButton" value="Query">
+
+                <p></p>
+
+                <p id="percentOutput"></p>
+
+                <h4>*Search for cards with adjustments to strength/health from abilities on the card.</h4>
+            </div>
+
+
+            <div class="float-right" id="card-list">
+                
+            </div>
+        </div>
+    </header>
+
+    <script src="content/heroes.js"></script>
+    <script src="content/plantCards.js"></script>
+    <script src="content/zombieCards.js"></script>
+    <script src="content/sigSupers.js"></script>
+    <script src="content/main.js"></script>
+</body>
